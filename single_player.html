@@ -38,7 +38,7 @@
     <script>
 function searchPlayer() {
     const playerName = document.getElementById('player-search').value.trim();
-    const apiUrl = `http://127.0.0.1:8000/players/single/${playerName}/`; 
+    const apiUrl = `https://leagueproject.onrender.com/players/single/${playerName}/`; 
     const access = localStorage.getItem("access_token");
 
     fetch(apiUrl, {
@@ -71,7 +71,7 @@ function searchPlayer() {
         function deletePlayer() {
             const playerName = document.getElementById('player-name').innerText;
             console.log("Attempting to delete player:", playerName); // Log player name
-            const apiUrl = `http://127.0.0.1:8000/players/delete-by-name/`; // Adjust according to your API endpoint
+            const apiUrl = `https://leagueproject.onrender.com/players/delete-by-name/`; // Adjust according to your API endpoint
             const access = localStorage.getItem("access_token")
 
 

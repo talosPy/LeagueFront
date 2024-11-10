@@ -70,7 +70,7 @@
 
         // Automate Matches function
         function automateMatches() {
-            fetch('http://127.0.0.1:8000/matches/automate/', {
+            fetch('https://leagueproject.onrender.com/matches/automate/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -101,7 +101,7 @@
 
         // Reset League Table function
         function resetLeagueTable() {
-            fetch('http://127.0.0.1:8000/matches/reset/', {
+            fetch('https://leagueproject.onrender.com/matches/reset/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -133,7 +133,7 @@
         // Play Fixture function with fixture number
         function playFixture(fixtureNumber) {
             console.log("Fixture number selected:", fixtureNumber);  // Added for debugging
-            fetch(`http://127.0.0.1:8000/matches/play-fixture/${fixtureNumber}/`, {
+            fetch(`https://leagueproject.onrender.com/matches/play-fixture/${fixtureNumber}/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

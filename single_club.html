@@ -39,7 +39,7 @@
     <script>
 function searchClub() {
     const clubName = document.getElementById('club-search').value.trim();
-    const apiUrl = `http://127.0.0.1:8000/clubs/single/${clubName}/`; // Adjust according to your API endpoint
+    const apiUrl = `https://leagueproject.onrender.com/clubs/single/${clubName}/`; // Adjust according to your API endpoint
 
     const access = localStorage.getItem("access_token");
     if (!access) {
@@ -97,7 +97,7 @@ function searchClub() {
 
         function deleteClub() {
             const clubName = document.getElementById('club-name').innerText; // Get the club name from the heading
-            const apiUrl = `http://127.0.0.1:8000/clubs/delete-by-name/`; // Ensure this matches your endpoint
+            const apiUrl = `https://leagueproject.onrender.com/clubs/delete-by-name/`; // Ensure this matches your endpoint
             const access = localStorage.getItem("access_token")
 
             fetch(apiUrl, {
