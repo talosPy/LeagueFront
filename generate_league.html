@@ -84,13 +84,11 @@
                 return response.json();
             })
             .then(data => {
-                const successMessage = data.message || 'Matches Automated Successfully';
                 document.getElementById('result-message').innerHTML = `
                     <div class="alert alert-success">
-                        ${successMessage}
+                        ${data.message}
                     </div>
                 `;
-                return successMessage;
             })
             .catch(error => {
                 document.getElementById('result-message').innerHTML = `
