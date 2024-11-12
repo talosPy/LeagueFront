@@ -86,14 +86,14 @@
             .then(data => {
                 document.getElementById('result-message').innerHTML = `
                     <div class="alert alert-success">
-                        ${data.message}
+                        Matches Automated!
                     </div>
                 `;
             })
             .catch(error => {
                 document.getElementById('result-message').innerHTML = `
                     <div class="alert alert-danger">
-                        Matches Automated!
+                        Error: ${error.message}
                     </div>
                 `;
             });
