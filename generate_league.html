@@ -86,7 +86,7 @@
             .then(data => {
                 document.getElementById('result-message').innerHTML = `
                     <div class="alert alert-success">
-                        Matches Automated!
+                        ${data.message}
                     </div>
                 `;
             })
