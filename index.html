@@ -90,7 +90,6 @@
     </footer>
     
     <script>
-      // Fetch user data and update the navbar
       const updateUserStatus = async () => {
         const apiUrl = `https://leagueproject.onrender.com/users/user/`; // Adjust according to your API endpoint
         const access = localStorage.getItem("access_token");
@@ -114,7 +113,6 @@
 
           const data = await response.json();
 
-          // Update the navbar with user info and logout button
           const userRole = data.is_staff ? "Admin" : "User";
           document.getElementById("userStatus").innerHTML = `
             <span class="nav-link">Logged in as ${data.username} (${userRole})</span>
@@ -127,7 +125,6 @@
         }
       };
 
-      // Logout function to clear token and redirect
       const logout = () => {
         localStorage.removeItem("access_token");
         window.location.href = "login.html";

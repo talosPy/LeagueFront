@@ -71,7 +71,7 @@ function searchPlayer() {
         function deletePlayer() {
             const playerName = document.getElementById('player-name').innerText;
             console.log("Attempting to delete player:", playerName); // Log player name
-            const apiUrl = `https://leagueproject.onrender.com/players/delete-by-name/`; // Adjust according to your API endpoint
+            const apiUrl = `https://leagueproject.onrender.com/players/delete-by-name/`; 
             const access = localStorage.getItem("access_token")
 
 
@@ -101,7 +101,7 @@ function searchPlayer() {
             document.getElementById('player-search').value = '';
             document.getElementById('player-card').style.display = 'none';
             document.getElementById('error-message').style.display = 'none';
-            document.getElementById('delete-button').style.display = 'none'; // Hide the delete button
+            document.getElementById('delete-button').style.display = 'none'; 
         }
     </script>
 </body>

@@ -49,7 +49,7 @@
 
         function populateTable(data) {
             const tableBody = document.getElementById('league-table-body');
-            tableBody.innerHTML = ''; // Clear existing rows
+            tableBody.innerHTML = ''; 
 
             data.forEach(row => {
                 const tr = document.createElement('tr');
@@ -78,17 +78,17 @@
             });
         }
 
-        // Fetch the league table when the page loads
+        
         document.addEventListener('DOMContentLoaded', fetchLeagueTable);
 
-        // Add event listener for the button to reset the league table
+        
         document.getElementById('reset-table-btn').addEventListener('click', async () => {
             try {
                 const response = await fetch('https://leagueproject.onrender.com/matches/reset/', { method: 'POST' });
                 if (!response.ok) {
                     throw new Error('Failed to reset league table');
                 }
-                await fetchLeagueTable(); // Fetch the new league table after reset
+                await fetchLeagueTable(); 
             } catch (error) {
                 console.error('Error resetting league table:', error);
             }
